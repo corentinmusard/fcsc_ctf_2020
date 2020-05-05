@@ -1,8 +1,8 @@
 # CryptoLocker
 
-## Forensic
+## Partie forensic
 
-```sh
+```bash
 $ file memory.dmp
 memory.dmp: MS Windows 32bit crash dump, PAE, full dump, 262030 pages
 ```
@@ -10,7 +10,7 @@ On a affaire à un dump mémoire windows.
 
 
 Volatility n'a pas l'air de trouver un profile adéquat, je vais forcer un profile de Windows 32bits au hasard.
-```sh
+```bash
 volatility -f memory.dmp --profile Win7SP1x86 imageinfo`
 ```
 Ça fonctionne, on récupère les infos habituelles.
@@ -28,7 +28,7 @@ Par 'chance', le fichier `flag.txt` est présent. Dans le même dossier, on trou
 0x000000003ed66b60      6      0 R--r-d \Device\HarddiskVolume1\Users\IEUser\Desktop\update_v0.5.exe
 ```
 On extrait ces 2 fichiers.
-```sh
+```bash
 mkdir filedump
 volatility -f memory.dmp --profile Win7SP0x86 dumpfiles -D filedump/ -Q 0x000000003ed13898
 volatility -f memory.dmp --profile Win7SP0x86 dumpfiles -D filedump/ -Q 0x000000003ed139f0
@@ -40,7 +40,7 @@ key.txt
 0ba883a22afb84506c8d8fd9e42a5ce4e8eb1cc87c315a28dd
 ```
 
-## Reverse
+## Partie reverse
 `update_v0.5.exe` est un PE32, il va falloir faire du reverse.
 
 Très rapidement, on trouve une fonction `_encryptFile`.

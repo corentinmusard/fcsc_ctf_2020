@@ -9,7 +9,7 @@ On recupere le contenu du fichier index.php grace au wrapper `php://`
 
 On voit que le fichier de session est modifiable et accessible en lecture.
 
-`PHPSESSIONID=97f1eeda9ea2d3a323571f9a9ee199aa;`
+On voit que notre cooki de session est `PHPSESSIONID=97f1eeda9ea2d3a323571f9a9ee199aa;`,
 donc notre fichier session est `sessions/sess_97f1eeda9ea2d3a323571f9a9ee199aa`.
 
 On utilise le payload suivant pour lire le flag (sans contenir 'flag').
