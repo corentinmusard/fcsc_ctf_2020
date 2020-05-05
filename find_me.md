@@ -1,6 +1,6 @@
 # Find_me
 
-Lorsque l'on monte le fs `find_me`, on voit qu'il y a 2 fichier.
+Lorsque l'on monte le fs `find_me`, on voit qu'il y a 2 fichiers.
 Un fichier chiffré avec luks et un fichier `pass.b64` qui dit que le pass n'est plus là.
 On va utiliser `sleuthkit` pour récuperer les fichiers effacés.
 

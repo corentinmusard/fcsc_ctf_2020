@@ -14,7 +14,7 @@ Le flag est donc `FCSC{challenge.fcsc:Lesage:5.4.0-4-amd64}`.
 ## Premiers artéfacts
 
 On avait déjà la version de linux, il manque juste la version de debian : `Debian GNU/Linux bullseye/sid`.
-Maintenant il va falloir créer un profile pour volatility car les infos demandées sont assez complexe à trouver avec `grep`.
+Maintenant il va falloir créer un profile pour volatility car les infos demandées sont assez complexe à trouver avec seulement `grep`.
 
 Maintenant on télécharge un iso de debian bullseye. On l'installe avec qemu, virtualbox ou autre.
 ```sh
@@ -94,9 +94,9 @@ Le flag est donc `PQHJRTSFYH-3467024-LSHRFLDFGA`.
 
 On va utiliser ce programme : https://github.com/congwang/rsakeyfind.
 Il nous trouve 2 clés privées identiques.
-On récupère comme information : `n`, `e` et `d`.
+On récupère comme information `n`, `e` et `d`.
 C'est suffisant pour récupérer le message chiffré.
-On crée un script python `academie_administration.py` pour décoder le message.
+On crée un script python [academie_administration.py](academie_administration.py) pour décoder le message.
 
 Le flag est donc `FCSC{ac5cad66114d4866a4b55e43cb8896cc4947855241b5af8d2f8a123c36083d98}`.
 
@@ -104,6 +104,7 @@ Le flag est donc `FCSC{ac5cad66114d4866a4b55e43cb8896cc4947855241b5af8d2f8a123c3
 
 Je n'ai pas réussi ce chall, je laisse juste ici quelques infos que j'avais.
 
+```
 518175248 mdp.kdbx - KeePass
 
 837028696 Panel-o/
@@ -134,3 +135,4 @@ TCP      10.42.42.131    :60750 10.42.42.132    :   80 CLOSE_WAIT               
 
 /var/log/samba/log.smbclient
 /etc/samba/smbpasswd
+```

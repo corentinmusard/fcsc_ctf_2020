@@ -2,7 +2,7 @@
 
 ## Script
 
-J'ai utilisé `rainbow.py` pour executer des requêtes simplement.
+J'ai utilisé [rainbow.py](rainbow.py) pour executer des requêtes simplement.
 
 ## Liens utiles (pour la v1 et la v2)
 -   https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/
@@ -37,7 +37,7 @@ On copie ce message d'erreur sur google, on voit que c'est du graphQL.
 
 On trouve ce github qui possède une requete pour dump la db https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/GraphQL%20Injection
 
-J'ai mis le dump dans le fichier `rainbow.json`. On voit la table `allFlags`.
+J'ai mis le dump dans le fichier [rainbow.json](rainbow.json). On voit la table `allFlags`.
 
 Payload qui récupère le flag
 ```sh
@@ -65,8 +65,8 @@ Voici un payload qui rècupère les prix des cuisiniers.
 ```sh
 corentin"}}]}){nodes{firstname}} yo: allCooks { nodes { price} }     }#
 ```
-Le `yo` est un alias arbitraire qui est necessaire lorsque l'on faire deux requetes (voir lien spec graphsql).
-Le `#` mets en commentaire la fin de la requête.
+-   Le `yo` est un alias arbitraire qui est necessaire lorsque l'on faire deux requetes (voir lien spec graphsql).
+-   Le `#` mets en commentaire la fin de la requête.
 
 La table `allFlags` n'existe pas, ils ont dû la renommer.
 Direction l'introspection pour récuperer les infos sur db.

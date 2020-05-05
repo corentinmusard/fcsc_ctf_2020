@@ -7,7 +7,7 @@ var _check = Module["_check"] = function ()
     return (_check = Module["_check"] = Module["asm"]["b"]).apply(null, arguments)
 };
 ```
-Dans la console (F12):
+Dans la console (F12) :
 ```js
 >> Module['asm']['b']
 function 4()
