@@ -9,7 +9,7 @@ Pour certains chall, il y a juste le script et des commentaires dedans.
 -   20 - [Poney]()
 
 ## Web
--   100 - [Bestiary](https://github.com/corentinmusard/fcsc_ctf_2020/blob/master/bestiary/bestiary.md)
+-   100 - [Bestiary](bestiary/bestiary.md)
 -   100 - [Flag Checker]()
 -   100 - [Liprogrammeurs]()
 -   25  - [RainbowPages v1]()

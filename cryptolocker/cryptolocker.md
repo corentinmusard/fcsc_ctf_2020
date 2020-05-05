@@ -11,7 +11,7 @@ On a affaire à un dump mémoire windows.
 
 Volatility n'a pas l'air de trouver un profile adéquat, je vais forcer un profile de Windows 32bits au hasard.
 ```bash
-volatility -f memory.dmp --profile Win7SP1x86 imageinfo`
+volatility -f memory.dmp --profile Win7SP1x86 imageinfo
 ```
 Ça fonctionne, on récupère les infos habituelles.
 
